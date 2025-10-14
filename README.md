@@ -55,7 +55,7 @@ graph TD
 - **Implementation**: Use code_execution for simulations (e.g., ANN passes). Requires Python with NumPy/SciPy; Acklam fallback for ndtri.
 - **Customization**: Adjust parameters (e.g., uplift +5%, norm_mode 'null').
 - **Contribute**: Issues/PRs for refinements (e.g., languages, domains). Test with Monte Carlo (500-1000 reps; seed for reproducibility).
-- **Cite**: Unya, T. (2025). Draco AgentTech Synthesis Framework. GitHub. [URL].
+- **Cite**: Unya, T. (2025). Draco AgentTech Synthesis Framework. GitHub. https://github.com/torisan-unya/DRACO/.
 
 ---
 
@@ -88,7 +88,7 @@ graph TD
 
 ## Acknowledgments
 
-Developed via human-AI collaboration (Grok, Gemini, ChatGPT, Claude). Inspired by GAAF and X-CII from Agora-Supercluster.
+Developed via human-AI collaboration (Grok, Gemini, ChatGPT, Claude). Inspired by GAAF and X-CII from Agora-Supercluster. Related to the DRACO project for advanced agentic simulations (https://github.com/torisan-unya/DRACO/).
 
 ---
 
