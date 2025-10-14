@@ -27,13 +27,21 @@ This repository hosts the **Draco AgentTech Synthesis Framework**, a versatile a
 Draco builds from GAAF prototypes to general-purpose editions:
 
 ```mermaid
-flowchart LR
-    A[Core: ANN + CPC] --> B[Version 1: X-CII Integrated<br>(Safety-Focused, Multilingual)]
-    A --> C[Version 2: GAAF Theory<br>(Dynamic Queries, VAE-Enhanced)]
-    B -- Metrics/Safety --> D[Future: Unified V3<br>(Pilots, Fairness Opt)]
-    C -- Adaptability --> D
-    style A fill:#f9f,stroke:#333
-    style D fill:#bbf,stroke:#333
+graph TD
+    A["<b>Core: ANN + CPC</b>"]
+    B["<b>Version 1: X-CII Integrated</b><br><i>(Safety-Focused, Multilingual)</i>"]
+    C["<b>Version 2: GAAF Theory</b><br><i>(Dynamic Queries, VAE-Enhanced)</i>"]
+    D["<b>Future: Unified V3</b><br><i>(Pilots, Fairness Opt)</i>"]
+    A --> B
+    A --> C
+    B -- "Metrics/Safety" --> D
+    C -- "Adaptability" --> D
+    classDef core fill:#f9f,stroke:#333,stroke-width:2px
+    class A core
+    classDef future fill:#bbf,stroke:#333,stroke-width:2px
+    class D future
+    classDef version fill:#ddf,stroke:#333,stroke-width:2px
+    class B,C version
 ```
 
 - **Version 1 ([Improved Draco with X-CII V2.9.64](./prompts/en/draco-agenttech-synthesis-framework-x-cii-en.md))**: Emphasizes safety via SDT and Expected Loss; multilingual (EN/JA/ZH/FR/ES/PT/KO) with fidelity scaling. Metrics: Median Relative X-CII ~107.2% [95% CI: 106.0-109.0%]; AUROC ~0.75-0.85. Use: High-stakes (e.g., healthcare explainability). Prompt: AI Proposal Mode; outputs summaries, tables, logs.
