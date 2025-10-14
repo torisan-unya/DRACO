@@ -44,7 +44,7 @@ graph TD
     class B,C version
 ```
 
-- **Version 1 ([Improved Draco with X-CII](./prompts/en/draco-agenttech-synthesis-framework-x-cii-en.md))**: Emphasizes safety via SDT and Expected Loss; multilingual (EN/JA/ZH/FR/ES/PT/KO) with fidelity scaling. Metrics: Median Relative X-CII ~107.2% [95% CI: 106.0-109.0%]; AUROC ~0.75-0.85. Use: High-stakes (e.g., healthcare explainability). Prompt: AI Proposal Mode; outputs summaries, tables, logs.
+- **Version 1 ([Draco with X-CII](./prompts/en/draco-agenttech-synthesis-framework-x-cii-en.md))**: Emphasizes safety via SDT and Expected Loss; multilingual (EN/JA/ZH/FR/ES/PT/KO) with fidelity scaling. Metrics: Median Relative X-CII ~107.2% [95% CI: 106.0-109.0%]; AUROC ~0.75-0.85. Use: High-stakes (e.g., healthcare explainability). Prompt: AI Proposal Mode; outputs summaries, tables, logs.
 - **Version 2 ([Draco with GAAF](./prompts/en/draco-agenttech-synthesis-framework-gaaf-en.md))**: Focuses on dynamic thresholds and interpretability; VAE for synthetic data and CPC for consensus. Metrics: Variance/error thresholds (0.02-0.07); CAG scores ≥14/20. Use: General (e.g., market impacts). Prompt: AI Proposal Mode; outputs phases, footnotes, ethical checks.
 
 ---
