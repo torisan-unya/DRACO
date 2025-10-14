@@ -5,7 +5,7 @@ Licensed under **MIT + Patent License Addendum** (see [License](#license)).
 
 This repository hosts the **Draco AgentTech Synthesis Framework**, a versatile agentic AI architecture for real-time analysis, decision support, and synthesis across domains like finance, policy, and creativity. It features two versions integrating Collective Predictive Coding (CPC), Agentic Neural Networks (ANN), and human-AI collaboration principles. As part of the **[Agora-Supercluster](https://github.com/torisan-unya/Agora-Supercluster)**, Draco prioritizes ethical, adaptive, and transparent synergies.
 
-**Elevator Pitch:** A self-evolving AI agent team that debates, predicts, and refines insights like a dynamic brain—delivering clear, verifiable results with humans at the center.
+**Elevator Pitch:** An advanced AI framework designed to navigate complexity. It deploys a team of specialized agents to rapidly gather, analyze, and synthesize vast information, delivering clear and reliable insights to support your critical decisions.
 
 **Notice and Updates:** Conceptual project; prompt-based blueprints for LLMs (e.g., Grok, GPT-4o, Claude). Simulations illustrative; no empirical claims. Updated October 15, 2025 (Version 1.1): Refined for clarity; added 2025 arXiv analogs from search (e.g., arXiv:2508.14825 on agentic AI in HAC).
 
