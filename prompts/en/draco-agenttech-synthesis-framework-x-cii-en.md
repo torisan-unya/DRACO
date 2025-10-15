@@ -21,14 +21,13 @@ Social/Lit: Native sourcing; verify at runtime. No-input: graceful pause.
   - **Output Focus:** Delivers quantitative scores, comparison tables, and detailed logs suitable for auditing and verification.
 
 
-### Features of This Prompt
-* **X-CII Core Integration:** Aggregates Q (robust z-score via sigmoid), E (harmonic mean of time/cost), S (SDT expected loss minimization: L(τ*)=c_FN·π·P_miss + c_FP·(1-π)·P_fa; τ* via closed-form Gaussian under equal-variance; normalization modes: null/worst_trivial/strict). Relative X-CII (%) = 100 × Core_collab / max(Core_human, Core_AI); synthetic baselines show medians ~107% (weak) / ~104% (strong) in baseline scenarios (Paper 4).
-* **Multilingual Pipeline:** Detect→Execute→Translate (rule-based conf=1.0/0.8; ML fallback <0.85); per-doc source_lang (mixed docs: paragraph granularity if >35% mixing); fidelity auto-scaled (1 - min(0.02, 0.01 + 0.02*(1-lang_conf))).
-* **CPC-Enhanced ANN:** Multi-agent team [data,predict,vae,drl,reflect,xai] with Collective Predictive Coding for decentralized inference; minimizes group free energy (KL[q(w|z)] + prediction errors) via shared representations 'w' (emergent consensus symbols).
-* **Dynamic Simulations:** Monte Carlo (500-1000 reps, seeded); sensitivities for λ (0-1), η (0.6-1.0), ρ (±0.5), AUROC shifts (e.g., 0.72: ~104% median, 90% win rate vs. weak baselines).
-* **AI Proposal Mode:** Interactive startup for theme specification; graceful handling of unspecified inputs.
-* **Enhanced CAG/RAG:** Credibility-Augmented Generation (CAG ≥14/20; w_type + w_fresh, 2yr window, relax for timeless topics); Reflexive-Augmented Generation for current data overrides.
-* **Robust Workflow:** Forward/backward passes (≥3 iters; trigger backward on var>thr/err>thr/S<0.5/L>1.2 L_null); Elo-CPC debates for debiasing; fidelity/uplift applied post-S clip.
+## Features of This Prompt
+
+* **X-CII Core Integration:** Q (sigmoid-robust z-score), E (time/costのharmonic mean), S (SDT expected loss minimization: L(τ*)=c_FN·π·P_miss + c_FP·(1-π)·P_fa; τ* via equal-variance Gaussian closed-form; modes: null/worst_trivial/strict, default null)。Relative X-CII (%) = 100 × Core_collab / max(Core_human, Core_AI); baselines medians ~105% (weak-strong平均, Paper 4)。
+* **Multilingual Pipeline:** Detect→Execute→Translate (rule-based conf=1.0/0.8; ML fallback <0.85); per-doc source_lang (mixed docs: >35% mixingでparagraph granularity); fidelity auto-scale (0.98-1.00: 1 - min(0.02, 0.01 + 0.02*(1-lang_conf)), lang_conf=None→0.9)。
+* **Dynamic Simulations:** Seeded Monte Carlo (start 500 reps, variance>thrで1000へescalate); sensitivities: λ(0-1), η(0.6-1.0), ρ(±0.5); AUROC例(0.72: ~104% median, 90% win rate vs. weak baselines)。
+* **AI Proposal Mode:** Interactive theme specification startup; unspecified inputsをgracefulにprompt_textでhandling (dedent形式, defaults: level=standard, output_mode=standard, uplift=1.00)。
+* **Robust Workflow:** Forward/backward passes (≥3 iters; backward trigger: var>thr/err>thr/S<0.5/L>1.2 L_null/bias>0.03); Elo-CPC debates for debiasing; fidelity/upliftをS post-clip適用 (uplift clip 0.5-2.0)。
 
 ### How to Use
 The method for starting your analysis with the Draco framework may vary slightly depending on the AI you are using. Please try one of the following methods according to your environment.
