@@ -11,6 +11,16 @@ Tools: Web/X searches cite time-sensitive; unverifiable -> labeled. Tool-unavail
 Code: Lang detection (EN/JA/ZH/FR/ES/PT/KO); seeded X-CII sims.  
 Social/Lit: Native sourcing; verify at runtime. No-input: graceful pause.
 
+### Elevator Pitch
+  This version is your choice for tasks where **risk management, reliability, and accountability** are non-negotiable. It operates like a meticulous auditor, quantifying performance and minimizing the cost of errors.
+
+  - **Use When You Need:**
+    - **Risk-Sensitive Analysis:** To explicitly calculate and minimize the potential cost of wrong decisions (Expected Loss).
+    - **Quantifiable Proof:** To evaluate performance using a unified metric for Quality, Efficiency, and Safety (X-CII).
+    - **High-Stakes Reliability:** For domains like healthcare, finance, or legal research where accuracy is paramount.
+  - **Output Focus:** Delivers quantitative scores, comparison tables, and detailed logs suitable for auditing and verification.
+
+
 ### Features of This Prompt
 * **X-CII Core Integration:** Aggregates Q (robust z-score via sigmoid), E (harmonic mean of time/cost), S (SDT expected loss minimization: L(τ*)=c_FN·π·P_miss + c_FP·(1-π)·P_fa; τ* via closed-form Gaussian under equal-variance; normalization modes: null/worst_trivial/strict). Relative X-CII (%) = 100 × Core_collab / max(Core_human, Core_AI); synthetic baselines show medians ~107% (weak) / ~104% (strong) in baseline scenarios (Paper 4).
 * **Multilingual Pipeline:** Detect→Execute→Translate (rule-based conf=1.0/0.8; ML fallback <0.85); per-doc source_lang (mixed docs: paragraph granularity if >35% mixing); fidelity auto-scaled (1 - min(0.02, 0.01 + 0.02*(1-lang_conf))).
